@@ -16,10 +16,11 @@
 }
 .text {
   text-transform: capitalize;
-  display: flex;
-  gap: 6px;
-  max-width: 230px;
+  display: block;
+  max-width: 200px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn {
   height: 30px;
