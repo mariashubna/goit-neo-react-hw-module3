@@ -14,8 +14,12 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
-    localStorage.setItem("contacts", JSON.stringify(contact));
-  });
+    if (contact.length === 0) {
+      localStorage.removeItem("contacts");
+    } else {
+      localStorage.setItem("contacts", JSON.stringify(contact));
+    }
+  }, [contact]);
 
   const handleDelete = (id) => {
     setContact(contact.filter((cont) => cont.id !== id));

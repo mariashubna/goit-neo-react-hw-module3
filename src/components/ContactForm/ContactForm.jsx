@@ -33,11 +33,16 @@ const ContactForm = ({ handleSubmit }) => {
     >
       <Form className={css.form}>
         <label htmlFor={nameId}>Name</label>
-        <Field type="text" id={nameId} name="name" />
-        <ErrorMessage name="name" component="span" />
+        <Field className={css.input} type="text" id={nameId} name="name" />
+        <ErrorMessage className={css.error} name="name" component="span" />
         <label htmlFor={numberId}>Number</label>
-        <Field type="string" id={numberId} name="number" />
-        <ErrorMessage name="number" component="span" />
+        <Field
+          className={css.input}
+          type="string"
+          id={numberId}
+          name="number"
+        />
+        <ErrorMessage className={css.error} name="number" component="span" />
         <button className={css.btn} type="submit">
           Add contact
         </button>
